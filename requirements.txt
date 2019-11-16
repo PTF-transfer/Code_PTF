@@ -1,0 +1,8 @@
+matplotlib==3.0.2
+tensorflow==1.11.0
+gym==0.10.9
+pygame==1.9.4
+pyparsing==2.3.0
+PyYAML==3.13
+scipy==1.2.0
+tensorboard-logger==0.1.0
