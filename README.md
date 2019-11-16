@@ -8,11 +8,6 @@ A) Gridworld
 
 python main.py -a dqn -c dqn_conf -g grid -d grid_conf -n 30000 -e 99 -s 112 -o adam learning_rate=3e-4 memory_size=2000000 replace_target_iter=1000 e_greedy=0.95 e_greedy_increment=2e-5 reward_decay=0.99 batch_size=128 soft_update=False save_model=True n_layer_1=20 save_per_episodes=1000 task=324 learning_step=10000
 
-B) Pinball
-
-python main.py -a dqn -c dqn_conf -g pinball -d pinball_conf -n 30000 -e 499 -s 112 -o adam learning_rate=3e-4 memory_size=2000000 replace_target_iter=1000 e_greedy=0.95 e_greedy_increment=2e-5 reward_decay=0.99 batch_size=128 soft_update=False save_model=True n_layer_1=20 configuration=game/pinball_hard_single.cfg sequential_state=False continuous_action=False start_position=[[0.6,0.4]] target_position=[0.1,0.1] learning_step=10000 save_per_episods=1000 
-
-
 2. A3C
 
 A) Gridworld
@@ -77,4 +72,5 @@ python main.py -a ptf_ppo -c ptf_ppo_conf -g pinball -d pinball_conf -n 20000 -e
 
 
 C) Reacher
+
 python main.py -a ptf_ppo -c ptf_ppo_conf -g reacher -d reacher_conf -n 20000 -e 1000 -s 2 -o adam n_layer_a_1=256 n_layer_c_1=256 learning_rate_a=1e-4 learning_rate_c=1e-4 learning_rate_o=1e-3 learning_rate_t=1e-3 e_greedy=0.95 e_greedy_increment=1e-2 replace_target_iter=1000 reward_decay=0.99 option_model_path=['source_policies/reacher/t1/model','source_policies/reacher/t2/model','source_policies/reacher/t3/model','source_policies/reacher/t4/model'] learning_step=10000 save_per_episodes=1000 task=hard c1=0.001 source_policy=a3c clip_value=10 batch_size=256 option_batch_size=32 reward_normalize=True done_reward=10 option_layer_1=32
